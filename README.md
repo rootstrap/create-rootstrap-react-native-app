@@ -14,3 +14,5 @@ We build this project highly inspired in `create-obytes-app` and `ignite-templat
 You can `cd APP_NAME` and try to run your app using the following command:
 
 `npm run ios:dev || npm run android:dev`
+
+sdlkjfsjld
