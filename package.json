@@ -1,0 +1,36 @@
+{
+  "name": "create-rootstrap-app",
+  "version": "1.0.3",
+  "description": "CLI to build a new react native app using the Rootstrap React Native Base",
+  "main": "./build/index.js",
+  "bin": "./build/index.js",
+  "files": [
+    "./build/**/*.js"
+  ],
+  "scripts": {
+    "start": "node .",
+    "build": "tsc"
+  },
+  "keywords": [
+    "React",
+    "React Native",
+    "Template",
+    "Typescript",
+    "CLI"
+  ],
+  "author": "Rootstrap",
+  "license": "ISC",
+  "dependencies": {
+    "cfonts": "^3.2.0",
+    "chalk": "^4.1.2",
+    "chalk-animation": "^1.6.0",
+    "fs-extra": "^10.1.0",
+    "gluegun": "^5.1.2",
+    "nanospinner": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
+    "@types/node": "^20.4.5",
+    "typescript": "^5.1.6"
+  }
+}

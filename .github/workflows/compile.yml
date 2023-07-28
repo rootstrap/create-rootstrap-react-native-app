@@ -1,0 +1,30 @@
+name: Build and Publish Package
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+    
+        steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v2
+    
+        - name: Set up Node.js
+          uses: actions/setup-node@v2
+          with:
+            node-version: '18'
+    
+        - name: Install Dependencies
+          run: npm install
+    
+        - name: Build TypeScript Project
+          run: npm run build
+        
+        - name: Login to npm
+          run: echo "//registry.npmjs.org/:_authToken=\${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+  
+        - name: Publish Package
+          run: npm publish
