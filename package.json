@@ -18,6 +18,10 @@
     "Typescript",
     "CLI"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rootstrap/create-rootstrap-react-native-app.git"
+  },
   "author": "Rootstrap",
   "license": "ISC",
   "dependencies": {
