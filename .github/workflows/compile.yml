@@ -23,8 +23,11 @@ jobs:
         - name: Build TypeScript Project
           run: npm run build
         
-        - name: Login to npm
-          run: echo "//registry.npmjs.org/:_authToken=\${{ secrets.NPM_TOKEN }}" > ~/.npmrc
-  
-        - name: Publish Package
-          run: npm publish
+        - name: Semantic Publish Release
+          uses: cycjimmy/semantic-release-action@v3
+          with:
+            branches: |
+              ['main']
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
